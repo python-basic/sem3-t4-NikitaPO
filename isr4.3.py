@@ -9,10 +9,8 @@ def test_t1():
 
 
 def test_t2(el): 
-    #в функцию должен передаваться словарь
     with pytest.raises(KeyError):
-        el.get("TEST_FILD") #намеренно заваленный тест,попытка получить 
-                            #значение по несуществующему ключу
+        el.get("TEST_FILD") 
 
 
 def dataPrint(data):
@@ -42,7 +40,7 @@ try:
         except json.JSONDecodeError:
             print("не json")
 
-        dataPrint(data) #если нужен вывод json
+        dataPrint(data) 
 except FileNotFoundError:
     print("не найден файл")
 except IOError:
